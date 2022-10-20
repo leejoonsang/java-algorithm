@@ -55,9 +55,21 @@ class Stack02Test {
     }
 
     @Test
+    void peek() {
+        Stack02 stack02 = new Stack02();
+        // stack이 비었는데 peek을 한다면?
+        assertThrows(EmptyStackException.class, ()->{
+            stack02.peek();
+        });
+        stack02.push(10);
+        int peeked = stack02.peek();
+        assertEquals(10, peeked);
+    }
+
+    @Test
     void realStack(){
         Stack<Integer> stack = new Stack<>();
-        // Exception 예외 검증
+        stack.peek();
         assertThrows(RuntimeException.class, ()->{
             stack.pop();
         });
