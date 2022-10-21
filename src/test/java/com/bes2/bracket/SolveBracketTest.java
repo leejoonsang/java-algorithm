@@ -10,9 +10,9 @@ class SolveBracketTest {
     @DisplayName("bracket well dissolved")
     void bracket(){
         SolveBracket sb = new SolveBracket();
-        assertTrue(sb.solution("()()"));
-//        assertTrue(sb.solution("(())()"));
-//        assertTrue(sb.solution(")()("));
+        assertTrue(sb.solutionA("()()"));
+        assertTrue(sb.solutionB("(())()"));
+        assertFalse(sb.solution("(".repeat(1_000_000)+")".repeat(999_990)));
 //        assertTrue(sb.solution("(()("));
     }
 }
