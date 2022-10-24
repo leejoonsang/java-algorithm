@@ -1,4 +1,4 @@
-package com.bes2;
+package com.bes2.stack;
 
 public class Stack01 {
     private int[] arr = new int[10000];

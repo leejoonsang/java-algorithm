@@ -1,4 +1,4 @@
-package com.bes2;
+package com.bes2.stack;
 
 import java.util.EmptyStackException;
 
@@ -11,7 +11,7 @@ public class Stack02 {
     }
 
     public Stack02(int size){
-        this.arr = new Integer[10000];
+        this.arr = new Integer[size];
     }
 
     public Integer[] getArr() {
