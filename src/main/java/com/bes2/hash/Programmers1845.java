@@ -27,3 +27,5 @@ public class Programmers1845 {
         System.out.println(p1845.solution(nums));
     }
 }
+
+
