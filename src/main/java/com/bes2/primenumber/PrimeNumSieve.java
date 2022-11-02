@@ -28,7 +28,7 @@ public class PrimeNumSieve {
 
     public boolean[] solution(int n) {
         int answer = 0;
-        int[] arr = new int[n+1];   // 인덱싱 어떻게?
+        int[] arr = new int[n+1];
         boolean[] check = new boolean[n+1];
 
         for(int i=2; i<=n; i++) {
@@ -36,9 +36,11 @@ public class PrimeNumSieve {
             check[i] = true;
         }
 
-        for(int i=2; i<=n; i++){
-            if(arr[i] % 2 == 0 && arr[i] > 2) {
-                check[i] = false;
+        for(int j=2; j*j<=n; j++){
+            for(int k=2; k<=n; k++){
+                if(arr[k] % j == 0 && arr[k] > j) {
+                    check[k] = false;
+                }
             }
         }
 
