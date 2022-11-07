@@ -2,22 +2,19 @@ package com.bes2.harshadnumber;
 
 public class HarshadNum {
 
-    public int solution(int x) {
-
-        int each[] = new int[10000];
+    public boolean solution(int x) throws Exception {
+        boolean answer = true;
         int sum = 0;
-        String strX = String.valueOf(x);
 
-        for(int i=0; i<strX.length(); i++){
-            each[i] = x%10;
-            sum += each[i];
+        while(x > 0){
+            sum += x%10;
+            x /= 10;
         }
 
-        boolean answer = true;
-        return sum;
+        return answer;
     }
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws Exception {
         HarshadNum harshadNum = new HarshadNum();
         System.out.println(harshadNum.solution(687));
     }
