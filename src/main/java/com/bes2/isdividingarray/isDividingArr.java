@@ -1,11 +1,14 @@
 package com.bes2.isdividingarray;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collections;
 import java.util.List;
 
 public class isDividingArr {
 
     public int[] solution(int[] arr, int divisor) {
-        List<Integer> list = null;
+        List<Integer> list = new ArrayList<>();
         int[] answer = {};
 
         for(int i=0; i<arr.length; i++){
@@ -13,6 +16,7 @@ public class isDividingArr {
                 list.add(arr[i]);
             }
         }
+        Collections.sort(list);
 
         answer = new int[list.size()];
         for(int i=0; i< answer.length; i++){
@@ -30,11 +34,7 @@ public class isDividingArr {
         isDividingArr ida = new isDividingArr();
         int[] arr = {5, 9, 7, 10};
         int divisor = 5;
-        try{
-            System.out.println(ida.solution(arr, divisor));
-        }catch (Exception e){
-            e.printStackTrace();
-        }
+        System.out.println(Arrays.toString(ida.solution(arr, divisor)));
 
     }
 }
