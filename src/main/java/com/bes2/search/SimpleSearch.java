@@ -9,6 +9,7 @@ public class SimpleSearch {
             Scanner sc = new Scanner(System.in);
             int n = sc.nextInt();
             int[] data = new int[n];
+            int answer = 0;
 
             for(int i=0; i<n; i++) {
                 data[i] = sc.nextInt();
@@ -16,10 +17,15 @@ public class SimpleSearch {
             int target = sc.nextInt();
 
             for(int i=0; i<data.length; i++) {
-                if(target == data[i]){
-                    System.out.println(i+1);
-                    break;
+                if(data[i] == target){
+                    answer = i+1;
                 }
+            }
+
+            if(answer == 0){
+                System.out.println(-1);
+            }else{
+                System.out.println(answer);
             }
 
         }catch (Exception e){
