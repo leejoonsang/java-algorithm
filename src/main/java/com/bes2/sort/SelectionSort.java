@@ -4,7 +4,7 @@ import java.util.Arrays;
 
 public class SelectionSort {
 
-    public int[] doSelectionSort(int[] arr) {
+    public int[] selectionSortAsc(int[] arr) {
         int minIdx;
         int temp;
 
@@ -24,7 +24,7 @@ public class SelectionSort {
         return arr;
     }
 
-    public int[] reverseSelectionSort(int arr[]) {
+    public int[] selectionSortDesc(int arr[]) {
         int maxIdx = 0;
         int temp;
 
@@ -48,7 +48,7 @@ public class SelectionSort {
     public static void main(String[] args) {
         int[] arr = new int[]{2, 7, 4, 9, 10, 223, 111, 23, 3, 39};
         SelectionSort selectionSort = new SelectionSort();
-        System.out.println(Arrays.toString(selectionSort.doSelectionSort(arr)));
-        System.out.println(Arrays.toString(selectionSort.reverseSelectionSort(arr)));
+        System.out.println(Arrays.toString(selectionSort.selectionSortAsc(arr)));
+        System.out.println(Arrays.toString(selectionSort.selectionSortDesc(arr)));
     }
 }
