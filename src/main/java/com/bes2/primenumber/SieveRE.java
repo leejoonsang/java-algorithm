@@ -13,12 +13,20 @@ public class SieveRE {
 
         for(int j=2; j*j<=n; j++) {
             for(int k=0; k< arr.length; k++) {
-                if(arr[k]%2 == 0 && arr[k] > j){
+                if(arr[k]%j==0 && arr[k]>j){
                     arr[k] = 0;
                 }
             }
         }
 
+        int cnt = 0;
+        for(int i=0; i<arr.length; i++){
+            if(arr[i] != 0){
+                cnt ++;
+            }
+        }
+
+        System.out.println(cnt);
         System.out.println(Arrays.toString(arr));
 
     }
